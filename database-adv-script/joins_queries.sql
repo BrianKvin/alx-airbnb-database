@@ -1,4 +1,4 @@
--- Inner join bookings
+-- Inner join bookings #Return only rows that have matching values
 SELECT 
     Booking.booking_id,
     Booking.property_id,
@@ -14,7 +14,7 @@ FROM
 INNER JOIN 
     User ON Booking.user_id = User.user_id;
 
--- Left JOin, property and reviews
+-- Left JOin, property and reviews # Returns all rows from the left table, and the matching rows from the right table
 SELECT 
     Property.property_id,
     Property.name,
@@ -31,7 +31,7 @@ ORDER BY
     Property.property_id ASC;
 
 
--- Full outer join - users and booking
+-- Full outer join - users and booking # Returns all rows from both tables. If there's no match, NULLs will appear in place of missing matches from either side.
 SELECT 
     User.user_id,
     User.first_name,
